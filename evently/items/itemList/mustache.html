@@ -1,0 +1,13 @@
+<h3>Recently Posted Items</h3>
+  {{#items}}
+    <a href="" onclick="return false;" class="item">
+      <div class="l_itemname" style="float:left; width: 300px;">
+        {{itemname}}
+      </div>
+        <div class="message" style="float:right;">
+          {{price}}
+        </div>
+    </a>
+      <div style="clear:both;"></div>
+<hr size="1">
+  {{/items}}

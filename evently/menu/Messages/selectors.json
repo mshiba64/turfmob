@@ -1,0 +1,5 @@
+{
+  "a[href=#Messages]" : {"click" : ["Messages"]},
+  "a[href=#Home]" : {"click" : ["Home"]},
+  "a[href=#ItemPost]" : {"click" : ["ItemPost"]}
+}

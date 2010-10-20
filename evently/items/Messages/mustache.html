@@ -1,0 +1,13 @@
+<form><label>Message: <input type="text" class="textfield" name="message" value="" style="width:250px"></label></form>
+
+<h3>Recent Messages</h3>
+  {{#items}}
+      <div class="avatar" style="float:left; width: 40px;">
+        {{#gravatar_url}}<img src="{{gravatar_url}}" width="36px" height="36px" alt="{{name}}"/>{{/gravatar_url}}
+      </div>
+        <div class="message" style="float:right; width: 300px;">
+          <b>{{nickname}}</b><br />{{message}}
+        </div>
+      <div style="clear:both;"></div>
+<hr size="1">
+  {{/items}}

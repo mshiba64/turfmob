@@ -1,0 +1,42 @@
+<div id="d_iteminfo">
+  {{itemname}}<br />
+  {{price}}<br />
+  Condition: {{condition}}<br />
+</div>
+<div id="d_image"><img src="images/{{_id}}.jpg" id="d_image_src"></div>
+<hr size="1">
+
+<div class="d_avatar">
+  {{#profile}}<img src="{{gravatar_url}}" class="d_avatar_img" alt="{{nickname}}"/>
+</div>
+<div class="d_description">
+  <b>{{nickname}}</b><br />{{/profile}}{{description}}
+</div>
+<div style="clear:both; width:400px;"></div>
+
+{{#messages}}
+<hr size="1">
+<div class="d_avatar">
+  <img src="{{gravatar_url}}" class="d_avatar_img" alt="{{nickname}}"/>
+</div>
+<div class="d_description">
+  <b>{{nickname}}</b><br />{{message}}
+</div>
+<div style="clear:both; width:400px;"></div>
+{{/messages}}
+
+<hr size="1">
+{{#myprofile}}
+<div class="d_avatar">
+  <img src="{{gravatar_url}}" class="d_avatar_img" alt="{{nickname}}"/>
+</div>
+<div class="d_description">
+  <b>{{nickname}}</b><br />
+  <form>
+  <input type="text" class="textfield" name="message" value="" style="width:290px">
+  <input type="hidden" name="_id" value="{{_id}}">
+  </form>
+</div>
+<div style="clear:both; width:400px;"></div>
+{{/myprofile}}
+

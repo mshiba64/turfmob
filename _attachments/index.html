@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My New CouchApp</title>
+    <link rel="stylesheet" href="style/main.css" type="text/css">
+  </head>
+
+<!-- Loading Google Map API -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&language=english"></script>
+<script type="text/javascript" src="http://code.google.com/apis/gears/gears_init.js"></script>
+
+<!-- Loading CouchApp API -->
+<script src="vendor/couchapp/loader.js"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript">
+
+function initialize() {
+  // connect couchapp events and div tags
+  $.couch.app(function(app) {
+    $("#menu").evently("menu", app);
+    $("#account").evently("account", app);
+    $("#profile").evently("profile", app);
+    $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
+    $.evently.connect("#account","#menu", ["loggedIn","loggedOut"]);
+    $("#items").evently("items", app);
+    $.evently.connect("#menu","#items", ["ItemPost","Messages","Home"]);
+    $.evently.connect("#account","#items", ["loggedIn","loggedOut"]);
+    $("#maparea").evently("maparea", app);
+    $.evently.connect("#account","#maparea", ["loggedIn","loggedOut"]);
+    $.evently.connect("#maparea","#items", ["itemReady"]);
+  });
+}
+
+</script>
+
+<body onload="initialize()">
+    <div id="top">
+      <div id="logo"> 
+        <a href="/turfmob/_design/turfmob/index.html"><img src="images/turfmob_logo.png" alt="Welcome to Turfmob!" id="logoimage" border="0"><img src="images/logo2.png" id="logoimage2" border="0"></a> 
+      </div> 
+      <div id="menu"></div>
+      <div id="account"></div>
+    </div>
+
+    <div id="page-outer"> 
+        <div id="profile"></div> 
+        <div id="maparea"></div>
+        <div id="items"></div> 
+    </div> 
+
+    <div id="foo"></div>
+
+</body>
+</html>

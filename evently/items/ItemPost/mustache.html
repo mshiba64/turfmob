@@ -1,0 +1,27 @@
+<form>
+  <h4>Item Posting</h4>
+  <table>
+  <tr><td width="100px">*Item Name:</td><td><input type="text" name="name" class="textfield" value=""></td></tr>
+  <tr><td>*Price:</td><td><input type="text" name="email" class="textfield" value=""></td></tr>
+
+  <tr><td>*Condition:</td>
+  <td>
+  <select name="condition" class="selectlist"> 
+  <option value="">--</option> 
+	<option value="Very worn">Very worn</option> 
+	<option value="Worn">Worn</option> 
+	<option value="Slightly worn">Slightly worn</option> 
+	<option value="Good">Good</option> 
+	<option value="Very good">Very good</option> 
+	<option value="Excellent">Excellent</option> 
+	<option value="Brand new">Brand new</option> 
+  </select>
+  </td></tr>
+
+  <tr><td>*Description:</td><td><textarea name="description" class="textareafield" style="width:250px;height:60px;"></textarea></td></tr>
+  <tr><td>*Item Photo:</td><td><input type="file" name="itemimage" class="fileupload"></td></tr>
+  </table>
+  <input type="hidden" name="message" size=60 value="">
+  <input type="submit" value="Post your item &rarr;" class="submitbutton" style="width:100px;float:right;">
+
+</form>
